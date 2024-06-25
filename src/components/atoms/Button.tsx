@@ -1,5 +1,4 @@
 import React from "react";
-import { clsx } from "clsx";
 interface ButtonProps {
   label: string;
   onClick?: () => void;
@@ -16,7 +15,7 @@ export const Button = ({
   ...rest
 }: ButtonProps) => {
   return (
-    <button onClick={onClick} disabled={disabled} className={className}>
+    <button onClick={onClick} disabled={disabled} className={className} {...rest}>
       {label}
     </button>
   );
