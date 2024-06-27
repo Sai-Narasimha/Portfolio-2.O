@@ -1,7 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import About from '../components/organisms/About';
-
+import ProjectCard from '../components/organisms/ProjectCard';
+import rini from '../assets/rini.png'
+import maigrate from '../assets/maigrate.png'
+import maigrateLanding from '../assets/maigrateLanding.png'
+import gift4day from '../assets/gift4day.png'
 
 const Hero = () => {
     const [expanded, setExpanded] = React.useState<string>('');
@@ -10,10 +14,68 @@ const Hero = () => {
         setExpanded(component === expanded ? '' : component);
     };
 
-    const resetExpanded = () => {
-        setExpanded('');
-    };
+    // const resetExpanded = () => {
+    //     setExpanded('');
+    // };
 
+    const [projects, setProjects] = React.useState([
+        {
+            title: 'Gift4Day',
+            location: 'UK',
+            role: 'Frontend Engineer',
+            techStack: 'React Js',
+            image: gift4day
+
+        },
+        {
+            title: 'Maigrate',
+            location: 'UK',
+            role: 'Frontend Engineer',
+            techStack: 'React Js',
+            image: maigrate
+
+        },
+        {
+            title: 'Maigrate Landing',
+            location: 'UK',
+            role: 'Frontend Engineer',
+            techStack: 'React Js',
+            image: maigrateLanding
+
+        },
+        {
+            title: 'QLM Enterprises',
+            location: 'Arab',
+            role: 'Frontend Engineer',
+            techStack: 'React Native',
+            image:''
+
+        },
+        {
+            title: 'My Hooxy',
+            location: 'Arab',
+            role: 'Frontend Engineer',
+            techStack: 'React Native',
+            image:''
+
+        },
+        {
+            title: 'RINI Landing',
+            location: 'UK',
+            role: 'Frontend Engineer',
+            techStack: 'HTML/CSS/JS',
+            image:rini
+
+        },
+        {
+            title: 'Dikazo',
+            location: 'UK',
+            role: 'Frontend Engineer',
+            techStack: 'HTML/CSS/JS',
+            image:''
+
+        },
+    ])
     return (
         <div className="h-[100vh] flex justify-center items-center bg-[#e5dfdf] relative">
             {/* Experience */}
@@ -28,9 +90,9 @@ const Hero = () => {
                     initial={{ width: '0%', height: '0%', top: '0%', left: '0%', borderBottomRightRadius: '50%' }}
                     animate={{ width: '100%', height: '100%', top: '0%', left: '0%', borderBottomRightRadius: '0px' }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
-                    onClick={resetExpanded}
+                    // onClick={resetExpanded}
                 >
-                    <div className="w-[50%] ">
+                    <div className="w-[90%] lg:w-[50%] m-auto lg:m-0">
 
                         <div className="text-[36px] text-center bg-[#e5dfdf] text-[#3a4445]">TrueEquations Pvt Ltd</div>
                         <div className='flex justify-between'>
@@ -57,9 +119,15 @@ const Hero = () => {
                     initial={{ width: '0%', height: '0%', top: '0%', right: '0%', borderBottomLeftRadius: '50%' }}
                     animate={{ width: '100%', height: '100%', top: '0%', right: '0%', borderBottomLeftRadius: '0' }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
-                    onClick={resetExpanded}
+                    // onClick={resetExpanded}
                 >
-                    <div className="h-[200px] w-[200px]">Projects Content</div>
+                    <div className="w-[fit-content] h-[80vh] lg:h-[auto] lg:w-[90%] m-auto lg:m-0 border border-1 border-[red] ">
+                        {/* {projects.map((project, index) => ( */}
+                        {/* <div key={index}> */}
+                        <ProjectCard projects={projects} />
+                        {/* </div>
+                        ))} */}
+                    </div>
                 </motion.div>
             )}
 
@@ -75,7 +143,7 @@ const Hero = () => {
                     initial={{ width: '0%', height: '0%', bottom: '0%', left: '0%', borderTopRightRadius: '50%' }}
                     animate={{ width: '100%', height: '100%', bottom: '0%', left: '0%', borderTopRightRadius: '0' }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
-                    onClick={resetExpanded}
+                    // onClick={resetExpanded}
                 >
                     <div className="h-[200px] w-[200px]">Education Content</div>
                 </motion.div>
@@ -93,7 +161,7 @@ const Hero = () => {
                     initial={{ width: '0%', height: '0%', bottom: '0%', right: '0%', borderTopLeftRadius: '50%' }}
                     animate={{ width: '100%', height: '100%', bottom: '0%', right: '0%', borderTopLeftRadius: '0px' }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
-                    onClick={resetExpanded}
+                    // onClick={resetExpanded}
                 >
                     <div className="h-[200px] w-[200px]">Contact Content</div>
                 </motion.div>
