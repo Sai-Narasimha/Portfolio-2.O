@@ -28,13 +28,13 @@ const ProjectCard = ({ projects }: any) => {
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 0.3 }}
                             >
-                                <div className="flex">
+                                <div className="block lg:flex">
                                     <img
                                         src={project.image}
                                         alt={`Slide ${index + 1}`}
-                                        className="h-auto object-cover w-[60%]"
+                                        className="h-auto object-cover w-[100%] lg:w-[60%]"
                                     />
-                                    <div className='w-[40%] border border-1 border-[red]'>
+                                    <div className='w-[100%] lg:w-[40%] border border-1 border-[red]'>
                                         <div>
                                             project Name : {project.title}
                                         </div>
