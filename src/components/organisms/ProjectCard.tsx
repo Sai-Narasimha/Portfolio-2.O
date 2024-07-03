@@ -28,7 +28,7 @@ const ProjectCard = ({ projects }: any) => {
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 0.3 }}
                             >
-                                <div className="text-center text-[34px] font-bold underline">
+                                <div className="text-center text-[22px] lg:text-[34px] font-bold underline">
                                     <a href={project.link} target="_blank">{project.title} - {project.role}</a>
                                 </div>
                                 <div className="block lg:flex gap-5 w-[90%] m-auto">

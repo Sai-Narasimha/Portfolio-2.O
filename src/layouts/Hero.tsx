@@ -4,6 +4,8 @@ import About from '../components/sections/About';
 import Education from '../components/sections/Education';
 import Projects from '../components/sections/Projects';
 import Experience from '../components/sections/Experience';
+import Contact from '../components/sections/Contact';
+import Skills from '../components/sections/Skills';
 
 const Hero = () => {
     const [expanded, setExpanded] = React.useState<string>('');
@@ -45,21 +47,13 @@ const Hero = () => {
             )}
 
             {/* Contact */}
-            <div className={`absolute right-0 bottom-0 text-[22px] p-4 text-center ${expanded !== 'contact' ? 'bg-[#e5dfdf] text-[#3a4445]' : 'bg-[#3a4445] text-[#e5dfdf]'} cursor-pointer z-10`}
+            <div className={`absolute right-0 bottom-0 text-[22px] p-4 text-center ${expanded !== 'skills' ? 'bg-[#e5dfdf] text-[#3a4445]' : 'bg-[#3a4445] text-[#e5dfdf]'} cursor-pointer z-10`}
                 style={{ borderRadius: "50% 0% 0% 0%" }}
-                onClick={() => toggleExpanded('contact')}>
-                <h1>Contact</h1>
+                onClick={() => toggleExpanded('skills')}>
+                <h1>Skills</h1>
             </div>
-            {expanded === 'contact' && (
-                <motion.div
-                    className="absolute bg-[#3a4445] text-[#e5dfdf] flex items-center justify-center z-0"
-                    initial={{ width: '0%', height: '0%', bottom: '0%', right: '0%', borderTopLeftRadius: '50%' }}
-                    animate={{ width: '100%', height: '100%', bottom: '0%', right: '0%', borderTopLeftRadius: '0px' }}
-                    transition={{ duration: 0.5, ease: "easeInOut" }}
-                // onClick={resetExpanded}
-                >
-                    <div className="h-[200px] w-[200px]">Contact Content</div>
-                </motion.div>
+            {expanded === 'skills' && (
+                <Skills />
             )}
 
             {/* Profile and Description */}

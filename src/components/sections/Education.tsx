@@ -11,17 +11,17 @@ const Education = () => {
 >
     <div className="w-[90%] lg:w-[50%] m-auto lg:m-0">
         <div>
-            <div className="text-[36px] text-center bg-[#e5dfdf] text-[#3a4445]">Masai School - Bengaluru</div>
-            <div className='flex justify-between'>
-                <div className='text-[20px]'>Full Stack Development</div>
-                <div className='text-[20px]'>Nov 2021  -  Nov 2022</div>
+            <div className=" text-[22px] lg:text-[36px] text-center bg-[#e5dfdf] text-[#3a4445]">Masai School - Bengaluru</div>
+            <div className='block lg:flex justify-between'>
+                <div className='text-[18px] lg:text-[20px]'>Full Stack Development</div>
+                <div className='text-[18px] lg:text-[20px]'>Nov 2021  -  Nov 2022</div>
             </div>
         </div>
         <div>
-            <div className="text-[36px] text-center bg-[#e5dfdf] text-[#3a4445] mt-3">Sri Sai Baba National Degree College - Anantapur</div>
-            <div className='flex justify-between'>
-                <div className='text-[20px]'>Bachelors Of Business Administration</div>
-                <div className='text-[20px]'>June 2018  -  Aug 2021</div>
+            <div className=" text-[22px] lg:text-[36px] text-center bg-[#e5dfdf] text-[#3a4445] mt-3">Sri Sai Baba National Degree College - Anantapur</div>
+            <div className='block lg:flex justify-between'>
+                <div className='text-[18px] lg:text-[20px]'>Bachelors Of Business Administration</div>
+                <div className='text-[18px] lg:text-[20px]'>June 2018  -  Aug 2021</div>
             </div>
         </div>
     </div>
